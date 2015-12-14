@@ -1,4 +1,4 @@
-Gallery Download v.0.1 2015-12-13
+Gallery Download v.0.2 2015-12-14
 <hr>
 <form action="dl.php" method="post" target="_blank">
     Download a gallery of images, such as<br>
@@ -8,7 +8,7 @@ Gallery Download v.0.1 2015-12-13
     <hr>
     <table>
         <tr>
-            <td>Base URL, e.g http://site.com/img/</td><td><input name="url" size="72"></td>
+            <td>URL folder, e.g http://site.com/img/</td><td><input name="url" size="72"></td>
         </tr>
         <tr>
             <td>Image name prefix (leave blank if numbers only)</td><td><input name="prefix"></td>
@@ -23,6 +23,15 @@ Gallery Download v.0.1 2015-12-13
         <tr>
             <td>Ending number</td><td><input name="end"></td>
         </tr>
+
+        <tr>
+            <td>Image name postfix</td><td> <input name="postfix"></td>
+        </tr>
+
+        <tr>
+            <td>Image type</td><td> <input name="imagetype" value=".jpg"></td>
+        </tr>
+        
         <tr>
             <td>Local Prefix to Save as</td><td> <input name="saveas" value="/home/heitor/saved_galleries/"></td>
         </tr>
