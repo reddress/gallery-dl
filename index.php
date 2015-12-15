@@ -1,5 +1,9 @@
 Gallery Download v.0.2 2015-12-14
 <hr>
+
+<a href="display.php">Display galleries</a>
+<hr>
+
 <form action="dl.php" method="post" target="_blank">
     Download a gallery of images, such as<br>
     http://site.com/img/0.jpg<br>
@@ -19,7 +23,7 @@ Gallery Download v.0.2 2015-12-14
         <tr>
             <td>Beginning number</td><td><input name="begin"></td>
         </tr>
-  
+        
         <tr>
             <td>Ending number</td><td><input name="end"></td>
         </tr>
