@@ -4,12 +4,14 @@ Gallery Download v.0.2 2015-12-14
 <a href="display.php" target="_blank">Display galleries</a>
 <hr>
 
-<form action="dl.php" method="post" target="_blank" onsubmit="resetform();">
+<form action="dl.php" method="post" target="_blank">
     Download a gallery of images, such as<br>
     http://site.com/img/0.jpg<br>
     http://site.com/img/1.jpg<br>
     http://site.com/img/2.jpg ...
     <hr>
+    <input type="button" onclick="resetform();" value="Reset form">
+
     <table>
         <tr>
             <td>URL folder, e.g http://site.com/img/</td><td><input name="url" size="72"></td>
