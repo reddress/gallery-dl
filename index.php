@@ -4,7 +4,7 @@ Gallery Download v.0.2 2015-12-14
 <a href="display.php">Display galleries</a>
 <hr>
 
-<form action="dl.php" method="post" target="_blank">
+<form action="dl.php" method="post" target="_blank" onsubmit="resetform();">
     Download a gallery of images, such as<br>
     http://site.com/img/0.jpg<br>
     http://site.com/img/1.jpg<br>
@@ -52,3 +52,22 @@ Gallery Download v.0.2 2015-12-14
         </tr>
     </table>
 </form>
+
+
+<script>
+ function timestamp() {
+     var now = new Date();
+     return "" + now.getFullYear() + "_" + (1 + now.getMonth()) + "_" + now.getDate() + "_" + now.getHours() + "_" + now.getMinutes() + "_" + now.getSeconds();
+ }
+ 
+ function resetform() {
+     console.log("resetting");
+     document.forms[0].elements['url'].value = "";
+     document.forms[0].elements['prefix'].value = "";
+     document.forms[0].elements['postfix'].value = "";
+     document.forms[0].elements['leading'].value = "0";
+     document.forms[0].elements['begin'].value = "";
+     document.forms[0].elements['end'].value = "";
+     document.forms[0].elements['newfolder'].value = timestamp();
+ }
+</script>
