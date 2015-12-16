@@ -1,7 +1,7 @@
 Gallery Download v.0.2 2015-12-14
 <hr>
 
-<a href="display.php">Display galleries</a>
+<a href="display.php" target="_blank">Display galleries</a>
 <hr>
 
 <form action="dl.php" method="post" target="_blank" onsubmit="resetform();">
