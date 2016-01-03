@@ -1,27 +1,17 @@
 <?php
 
-$basedir = "/home/heitor/saved_galleries/";
-
-if (isset($_GET['basedir'])) {
-    if (strpos($_GET['basedir'], ".") !== FALSE) {
-        echo("Base folder");
-    } else {
-        $basedir .= $_GET['basedir'] . "/";        
-    }
-    
-}
-
+$basedir = "/home/heitor/saved_galleries/cohf_sara";
 
 $files = scandir($basedir);
 
+print_r($files);
+
 $dict = [];
 
-// reassign dictionary key, will only work with series 0.jpg, 1.jpg ... 10.jpg
-// because the test only checks for filename length, rather than if the
-// characters are actually digits.
 foreach ($files as $file) {
     // check length, if it is 5 characters long, it is likely ?.jpg
     if (strlen($file) === 5) {
+        print($file . " is 5 characters long");
         $digit = $file[0];
         $dict['0' . $digit] = $file;
     } else {
@@ -29,6 +19,8 @@ foreach ($files as $file) {
     }
 }
 
+
+print_r($dict);
 ksort($dict);
 
 foreach ($dict as $file) {
@@ -38,8 +30,9 @@ foreach ($dict as $file) {
     }
 
     if (is_dir($basedir . $file)) {
-        echo("<a href='display.php?basedir=" . $file . "' target='_blank'>" . $file . "</a>");
+        echo("<a href='display.php?basedir=" . $file . "'>" . $file . "</a>");
         echo("<br>\n");
     }
 }
-?>
+
+    
