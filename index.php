@@ -42,7 +42,7 @@ Gallery Download v.0.2 2015-12-14
             <td>Local Prefix to Save as</td><td> <input name="saveas" value="/home/heitor/saved_galleries/"></td>
         </tr>
         <tr>
-            <td>New local folder:</td><td><input name="newfolder" value="<?= date('YmdHi') ?>"></td>
+            <td>New local folder:</td><td><input name="newfolder" value="<?= date('YmdHis') ?>"></td>
         </tr>
         <tr>
             <td>
@@ -58,8 +58,10 @@ Gallery Download v.0.2 2015-12-14
 
 <script>
  function timestamp() {
-     var now = new Date();
-     return "" + now.getFullYear() + "_" + (1 + now.getMonth()) + "_" + now.getDate() + "_" + now.getHours() + "_" + now.getMinutes() + "_" + now.getSeconds();
+   var now = new Date();
+   var nowStr = now.toISOString();
+   //return "" + now.getFullYear() + "_" + (1 + now.getMonth()) + "_" + now.getDate() + "_" + now.getHours() + "_" + now.getMinutes() + "_" + now.getSeconds();
+   return nowStr.slice(0, 10).replace(/-/g, '') + nowStr.slice(11, 19).replace(/:/g, "");
  }
  
  function resetform() {
