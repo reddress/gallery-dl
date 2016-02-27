@@ -14,7 +14,7 @@ Gallery Download v.0.2 2015-12-14
 
     <table>
         <tr>
-            <td>URL folder, e.g http://site.com/img/</td><td><input name="url" size="72"></td>
+            <td>URL e.g http://site.com/img/0.jpg</td><td><input name="url" size="72"></td>
         </tr>
         <tr>
             <td>Image name prefix (leave blank if numbers only)</td><td><input name="prefix"></td>
