@@ -6,7 +6,7 @@ $start_index = (int) $_POST['begin'];
 $end_index = (int) $_POST['end'];
 
 for ($cur_num = $start_index; $cur_num <= $end_index; $cur_num++) {
-    $base = $_POST['url'];
+    $base = dirname($_POST['url']);
     if (substr($base, -1) != "/") {
         $base .= "/";
     }
