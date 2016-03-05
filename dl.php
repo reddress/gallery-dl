@@ -11,7 +11,9 @@ for ($cur_num = $start_index; $cur_num <= $end_index; $cur_num++) {
         $base .= "/";
     }
 
-    $filename = $_POST['prefix'] . str_pad($cur_num, ((int) $_POST['leading']) + 1, "0", STR_PAD_LEFT) . $_POST['postfix'] . $_POST['imagetype'];
+  $filename = $_POST['prefix'] . str_pad($cur_num, ((int) $_POST['leading']) + 1, "0", STR_PAD_LEFT) . $_POST['postfix'] . $_POST['imagetype'];
+  
+  $save_to_filename = str_pad($cur_num, ((int) $_POST['leading']) + 1, "0", STR_PAD_LEFT) . $_POST['postfix'] . $_POST['imagetype'];
 
     $source = $base . $filename;
     $dest_folder = $_POST['saveas'] . $_POST['newfolder'];
@@ -20,7 +22,8 @@ for ($cur_num = $start_index; $cur_num <= $end_index; $cur_num++) {
         mkdir($dest_folder, 0777, true);
     }
 
-    $dest = $dest_folder . "/" . $filename;
+  // $dest = $dest_folder . "/" . $filename;
+  $dest = $dest_folder . "/" . $save_to_filename;
 
     echo("file_put_contents(\"$dest\", file_get_contents(\"$source\")");
     echo("<br>");

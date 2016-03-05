@@ -17,25 +17,25 @@ Gallery Download v.0.2 2015-12-14
             <td>URL e.g http://site.com/img/0.jpg</td><td><input name="url" size="72"></td>
         </tr>
         <tr>
-            <td>Image name prefix (leave blank if numbers only)</td><td><input name="prefix"></td>
+            <td>Image name prefix (leave blank if numbers only)</td><td><input name="prefix" autocomplete="off"></td>
         </tr>
         <tr>
-            <td>Leading zeros (0 if first file is 0.jpg or 1.jpg)</td><td> <input name="leading" value="0"></td>
+            <td>Leading zeros (0 if first file is 0.jpg or 1.jpg)</td><td> <input name="leading" value="0" autocomplete="off"></td>
         </tr>
         <tr>
-            <td>Beginning number</td><td><input name="begin"></td>
+            <td>Beginning number</td><td><input name="begin" autocomplete="off"></td>
         </tr>
         
         <tr>
-            <td>Ending number</td><td><input name="end"></td>
+            <td>Ending number</td><td><input name="end" autocomplete="off"></td>
         </tr>
 
         <tr>
-            <td>Image name postfix</td><td> <input name="postfix"></td>
+            <td>Image name postfix</td><td> <input name="postfix" autocomplete="off"></td>
         </tr>
 
         <tr>
-            <td>Image type</td><td> <input name="imagetype" value=".jpg"></td>
+            <td>Image type</td><td> <input name="imagetype" value=".jpg" autocomplete="off"></td>
         </tr>
         
         <tr>
@@ -59,7 +59,8 @@ Gallery Download v.0.2 2015-12-14
 <script>
  function timestamp() {
    var now = new Date();
-   var nowStr = now.toISOString();
+   var nowLocal = new Date(now.getTime() - (now.getTimezoneOffset() * 60000));
+   var nowStr = nowLocal.toISOString();
    //return "" + now.getFullYear() + "_" + (1 + now.getMonth()) + "_" + now.getDate() + "_" + now.getHours() + "_" + now.getMinutes() + "_" + now.getSeconds();
    return nowStr.slice(0, 10).replace(/-/g, '') + nowStr.slice(11, 19).replace(/:/g, "");
  }
