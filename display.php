@@ -1,3 +1,12 @@
+<html>
+  <head>
+    <style>
+     img {
+         max-width: 100%;
+     }
+    </style>
+  </head>
+  <body>
 <?php
 
 $basedir = "/home/heitor/saved_galleries/";
@@ -43,3 +52,5 @@ foreach ($dict as $file) {
     }
 }
 ?>
+  </body>
+</html>
