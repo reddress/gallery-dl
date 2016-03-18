@@ -1,4 +1,4 @@
-Gallery Download v.0.2 2015-12-14
+Gallery Download v.0.3 2016-03-17
 <hr>
 
 <a href="display.php" target="_blank">Display galleries</a>
