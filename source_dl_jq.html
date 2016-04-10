@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Source DL</title>
+  </head>
+  <body>
+    <form action="source_dl.php" method="POST">
+      Base URL: <input type="text" id="baseurl"><br>
+      <textarea id="raw_source" rows="10" cols="60"></textarea>
+      <br>
+      <button type="button" id="extract">Extract links</button>
+      <br>
+      <textarea id="links" name="links" rows="8" cols="60"></textarea>
+      <br>
+      <input type="submit">
+    </form>
+    <script src="jquery.js"></script>
+    <script>
+     var links;
+     $("#extract").click(function() {
+       var baseurl = $("#baseurl").val();
+       links = $($("#raw_source").val()).find("a");
+       $.each(links, function(key, value) {
+         var link_href = $(value).attr("href");
+         var extension = link_href.substr(link_href.length - 3);
+         if (extension === "jpg" || extension === "JPG") {
+           $("#links").append(baseurl + link_href + "\n");
+         }
+       });
+     });
+    </script>
+  </body>
+</html>
