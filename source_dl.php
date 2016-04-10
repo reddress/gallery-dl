@@ -28,7 +28,7 @@
 
         $save_to_filename = str_pad($cur_num, 3, "0", STR_PAD_LEFT) . $imagetype;
           
-        $source = $raw_link;
+        $source = trim($raw_link);
 
         // $dest = $dest_folder . "/" . $filename;
         $dest = $dest_folder . "/" . $save_to_filename;
