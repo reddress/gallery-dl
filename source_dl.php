@@ -6,6 +6,8 @@
     <body>
       
       <?php
+      set_time_limit(600);
+      
       // echo $_POST["links"];
 
       $raw_links = trim($_POST["links"]);

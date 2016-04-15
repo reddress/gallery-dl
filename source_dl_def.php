@@ -14,6 +14,7 @@
       <br><br>
 
       Base URL (include http://) <input type="text" id="baseurl"><br>
+      Source code (must include enclosing element, such as div): <br>
       <textarea id="raw_source" rows="10" cols="60"></textarea>
       <br>
       <button type="button" id="extract">Extract links</button>
@@ -32,8 +33,8 @@
     <script src="jquery.js"></script>
     <script>
      var link_matches;
-     var totalLinks = 0;
      $("#extract").click(function() {
+       var totalLinks = 0;
        $("#links").val("");
        var baseurl = $("#baseurl").val();
        link_matches = $($("#raw_source").val()).find("a");
