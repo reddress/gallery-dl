@@ -5,7 +5,7 @@
     <title>Source DL</title>
   </head>
   <body>
-    Gallery Download (from Source) v.0.1 2016-04-09<br>
+    Gallery Download (from Source) v.0.1.1 2016-05-08<br>
     <a href="display.php" target="_blank">Display galleries</a>
     <hr>
 
@@ -65,6 +65,7 @@
        $("#links").val("");
        document.forms[0].elements['newfolder'].value = timestamp();
        $("#totalLinks").html("");
+       totalLinks = 0;
      }
 
     </script>
