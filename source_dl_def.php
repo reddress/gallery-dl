@@ -5,8 +5,8 @@
     <title>Source DL</title>
   </head>
   <body>
-    Gallery Download (from Source) v.0.1.1 2016-05-08<br>
-    <a href="display.php" target="_blank">Display galleries</a>
+    Gallery Download (from Source) v.0.1.1 2016-05-08<hr>
+    <a href="thumbs.php" target="_blank">Display galleries</a>
     <hr>
 
     <form action="source_dl.php" method="POST" target="_blank">

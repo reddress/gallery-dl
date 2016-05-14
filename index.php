@@ -1,9 +1,9 @@
-Gallery Download v.0.3 2016-03-17
+Gallery Download v.0.4 2016-05-14
 <hr>
 <a href="source_dl_def.php">Download from source</a>
 <hr>
 
-<a href="display.php" target="_blank">Display galleries</a>
+<a href="thumbs.php" target="_blank">Display galleries</a>
 <hr>
 
 <form action="dl.php" method="post" target="_blank">
