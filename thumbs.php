@@ -34,8 +34,7 @@
 
 
     $files = scandir($basedir);
-
-var_dump($files);
+    
     $dict = [];
 
     // reassign dictionary key, will only work with series 0.jpg, 1.jpg ... 10.jpg
@@ -52,7 +51,7 @@ var_dump($files);
     }
 
     ksort($dict);
-var_dump($dict);
+
     foreach ($dict as $file) {
       if (strpos($file, "jpg") !== FALSE) {
         
