@@ -35,6 +35,7 @@
 
     $files = scandir($basedir);
 
+var_dump($files);
     $dict = [];
 
     // reassign dictionary key, will only work with series 0.jpg, 1.jpg ... 10.jpg
@@ -42,7 +43,7 @@
     // characters are actually digits.
     foreach ($files as $file) {
       // check length, if it is 5 characters long, it is likely ?.jpg
-      if (strlen($file) === 5) {
+      if (strlen($file) === 5 && strtolower(substr($file, -3)) === "jpg") {
         $digit = $file[0];
         $dict['0' . $digit] = $file;
       } else {
@@ -51,7 +52,7 @@
     }
 
     ksort($dict);
-
+var_dump($dict);
     foreach ($dict as $file) {
       if (strpos($file, "jpg") !== FALSE) {
         
