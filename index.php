@@ -16,7 +16,9 @@
       <input type="button" onclick="resetform();" value="Reset form">
       <br><br>
 
-      Base URL (include http://) <input type="text" id="baseurl"><br>
+      Base URL (include http://) <br>
+      <input type="button" value="Set text field to http://" onclick="document.getElementById('baseurl').value='http://'; document.getElementById('baseurl').focus()">
+      <input type="text" id="baseurl"><br>
       Source code (must include enclosing element, such as div): <br>
       <textarea id="raw_source" rows="10" cols="60"></textarea>
       <br>
