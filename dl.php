@@ -36,8 +36,8 @@ for ($cur_num = $start_index; $cur_num <= $end_index; $cur_num++) {
     echo("file_put_contents(\"$dest\", file_get_contents(\"$source\")");
     echo("<br>");
     echo("<br>");
-    flush();
     ob_flush();
+    flush();
     
     file_put_contents($dest, file_get_contents($source, false, $context));
 }

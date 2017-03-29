@@ -38,8 +38,8 @@
         echo("file_put_contents(\"$dest\", file_get_contents(\"$source\")");
         echo("<br>");
         echo("<br>");
-        flush();
         ob_flush();
+        flush();
         
         $cur_num++;
         
