@@ -1,4 +1,6 @@
 <?php
+set_time_limit(600);
+
 
 header( 'Content-type: text/html; charset=utf-8' );
 
@@ -42,4 +44,5 @@ for ($cur_num = $start_index; $cur_num <= $end_index; $cur_num++) {
     file_put_contents($dest, file_get_contents($source, false, $context));
 }
 
+echo("All done");
 ?>
